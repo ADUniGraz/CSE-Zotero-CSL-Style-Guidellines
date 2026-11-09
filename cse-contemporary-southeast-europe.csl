@@ -1192,11 +1192,11 @@
         <choose>
           <if variable="reviewed-genre title">
             <!-- Quotes, title case -->
-            <text form="short" quotes="true" text-case="title" variable="title"/>
+            <text form="short"  text-case="title" variable="title"/>
           </if>
           <else-if variable="reviewed-genre reviewed-title title">
             <!-- Quotes, title case -->
-            <text form="short" quotes="true" text-case="title" variable="title"/>
+            <text form="short"  text-case="title" variable="title"/>
           </else-if>
           <else>
             <text macro="description-short"/>
@@ -1374,29 +1374,29 @@
       </else-if>
       <else-if type="entry-encyclopedia" variable="author container-title">
         <!-- Signed encyclopedia entry in quotes, title case (CMOS18 14.132) -->
-        <text form="short" quotes="true" text-case="title" variable="title"/>
+        <text form="short"  text-case="title" variable="title"/>
       </else-if>
       <else-if type="entry-dictionary" variable="container-title">
         <!-- Quotes, sentence case -->
-        <text form="short" quotes="true" variable="title"/>
+        <text form="short"  variable="title"/>
       </else-if>
       <else-if type="entry-encyclopedia" variable="container-title">
         <!-- Quotes, sentence case -->
-        <text form="short" quotes="true" variable="title"/>
+        <text form="short"  variable="title"/>
       </else-if>
       <else-if type="post">
         <!-- Quotes, sentence case -->
-        <text form="short" quotes="true" variable="title"/>
+        <text form="short"  variable="title"/>
       </else-if>
       <!-- Other types are formatted based on presence of `container-title` -->
       <else-if variable="container-title">
         <!-- Quotes, title case -->
-        <text form="short" quotes="true" text-case="title" variable="title"/>
+        <text form="short"  text-case="title" variable="title"/>
       </else-if>
       <else-if match="any" type="article dataset document interview manuscript paper-conference personal_communication speech thesis webpage">
         <!-- Container-like but not necessarily with `container-title` -->
         <!-- Quotes, title case -->
-        <text form="short" quotes="true" text-case="title" variable="title"/>
+        <text form="short"  text-case="title" variable="title"/>
       </else-if>
       <else>
         <!-- Italicized, title case (default) -->
@@ -1566,7 +1566,7 @@
           <choose>
             <if match="none" position="ibid ibid-with-locator">
               <text macro="source-monographic-preposition-note"/>
-              <text form="short" quotes="true" text-case="title" variable="volume-title"/>
+              <text form="short"  text-case="title" variable="volume-title"/>
             </if>
           </choose>
         </else-if>
@@ -3704,7 +3704,7 @@
                   <text form="short" term="sub-verbo"/>
                 </if>
               </choose>
-              <text form="short" quotes="true" variable="title"/>
+              <text form="short"  variable="title"/>
             </group>
           </else-if>
         </choose>
